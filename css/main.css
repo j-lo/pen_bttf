@@ -1,0 +1,827 @@
+/* RESET
+======================================================== */
+
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+body { margin: 0; }
+article, aside, footer, header, nav, section { display: block; }
+h1 { font-size: 2em; margin: 0.67em 0; }
+figcaption, figure, main { display: block; }
+figure { margin: 1em 40px; }
+hr { box-sizing: content-box; height: 0; overflow: visible; }
+pre { font-family: monospace, monospace; font-size: 1em; }
+a { background-color: transparent; -webkit-text-decoration-skip: objects; }
+a:active, a:hover { outline-width: 0; }
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted;
+}
+b, strong { font-weight: inherit; }
+b, strong { font-weight: bolder; }
+code, kbd, samp { font-family: monospace, monospace; font-size: 1em; }
+dfn { font-style: italic; }
+mark { background-color: #ff0; color: #000; }
+small { font-size: 80%; }
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sub { bottom: -0.25em; }
+sup { top: -0.5em; }
+audio, video { display: inline-block; }
+audio:not([controls]) { display: none; height: 0; }
+img { border-style: none; }
+svg:not(:root) { overflow: hidden; }
+button, input, optgroup, select, textarea {
+    font-family: 'Open Sans';
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+button, input { overflow: visible; }
+button, select { text-transform: none; }
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] { -webkit-appearance: button; }
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner { border-style: none; padding: 0; }
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring { outline: 1px dotted ButtonText; }
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
+}
+progress { display: inline-block; vertical-align: baseline; }
+textarea { overflow: auto; }
+[type="checkbox"],
+[type="radio"] { box-sizing: border-box; padding: 0; }
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button { height: auto; }
+[type="search"] { -webkit-appearance: textfield; outline-offset: -2px; }
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+::-webkit-file-upload-button { -webkit-appearance: button; font: inherit; }
+details, menu { display: block; }
+summary { display: list-item; }
+canvas { display: inline-block; }
+template { display: none; }
+[hidden] { display: none; }
+
+
+/* FRAMEWORK
+======================================================== */
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.column, .columns {
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+}
+/* For devices larger than 320px */
+@media (min-width: 320px) { .container { width: 84%; padding: 0; } }
+/* For devices larger than 400px */
+@media (min-width: 480px) { .container { width: 85%; padding: 0; } }
+/* For devices larger than 550px */
+@media (min-width: 660px) {
+    .container { width: 80%; }
+    .column, .columns { margin-left: 4%; }
+    .column:first-child, .columns:first-child { margin-left: 0; }
+
+    .one.column,
+    .one.columns                    { width: 4.66666666667%; }
+    .two.columns                    { width: 13.3333333333%; }
+    .three.columns                  { width: 22%;            }
+    .four.columns                   { width: 30.6666666667%; }
+    .five.columns                   { width: 39.3333333333%; }
+    .six.columns                    { width: 48%;            }
+    .seven.columns                  { width: 56.6666666667%; }
+    .eight.columns                  { width: 65.3333333333%; }
+    .nine.columns                   { width: 74.0%;          }
+    .ten.columns                    { width: 82.6666666667%; }
+    .eleven.columns                 { width: 91.3333333333%; }
+    .twelve.columns                 { width: 100%; margin-left: 0; }
+
+    .one-third.column               { width: 30.6666666667%; }
+    .two-thirds.column              { width: 65.3333333333%; }
+
+    .one-half.column                { width: 48%; }
+}
+
+/* For essentially any non-mobile device (ie desktop upwards), larger than 1025px */
+@media (min-width: 1025px) { .container { width: 88%; } }
+
+
+/* BUTTONS
+======================================================== */
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    display: inline-block;
+    height: 38px;
+    margin: 0 0.6rem;
+    padding: 0 30px;
+	font-family: 'din-2014';
+    color: #4e4d4d;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 1px solid #bbb;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+    background-color: #F9F5F3;
+    color: #4e4d4d;
+    border-color: #e8e6e4;
+    outline: 0;
+}
+.button.button_primary,
+button.button_primary,
+input[type="submit"].button_primary,
+input[type="reset"].button_primary,
+input[type="button"].button_primary {
+    color: #fff;
+    background-color: #09a6ae;
+    border-color: #09a6ae;
+}
+.button.button_primary:hover,
+button.button_primary:hover,
+input[type="submit"].button_primary:hover,
+input[type="reset"].button_primary:hover,
+input[type="button"].button_primary:hover,
+.button.button_primary:focus,
+button.button_primary:focus,
+input[type="submit"].button_primary:focus,
+input[type="reset"].button_primary:focus,
+input[type="button"].button_primary:focus {
+    color: #fff;
+    background-color: #068c93;
+    border-color: #068c93;
+}
+
+.button.button_secondary,
+button.button_secondary,
+input[type="submit"].button_secondary,
+input[type="reset"].button_secondary,
+input[type="button"].button_secondary {
+    color: #fff;
+    background-color: #40367b;
+    border-color: #40367b;
+}
+
+
+/* LISTS
+======================================================== */
+
+ul { list-style: circle inside; }
+ol { list-style: decimal inside; }
+ol, ul { padding-left: 0; margin-top: 0; }
+ul ul,
+ul ol,
+ol ol,
+ol ul { margin: 1.5rem 0 1.5rem 3rem; font-size: 90%; }
+li { list-style-type: disc; font-size: 1.6rem; margin-bottom: 1rem; }
+ul ul li { list-style-type: circle; }
+
+
+/* FORMS
+======================================================== */
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+    height: 38px;
+    padding: 6px 10px;
+    background-color: #fff;
+    border: 1px solid #D1D1D1;
+    border-radius: 4px;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+textarea {
+    min-height: 65px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus { border: 1px solid #3F357A; outline: 0; opacity: 1; }
+label, legend {
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: 600;
+}
+fieldset { padding: 0; border-width: 0; }
+input[type="checkbox"],
+input[type="radio"] { display: inline; }
+label > .label-body {
+    display: inline-block;
+    margin-left: .5rem;
+    font-weight: normal;
+}
+
+
+/* TABLES
+======================================================== */
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #E1E1E1;
+}
+th:first-child, td:first-child { padding-left: 0; }
+th:last-child, td:last-child { padding-right: 0; }
+
+
+/* CODE
+======================================================== */
+
+code {
+    padding: .2rem .5rem;
+    margin: 0 .2rem;
+    font-size: 90%;
+    white-space: nowrap;
+    background: #F1F1F1;
+    border: 1px solid #E1E1E1;
+    border-radius: 4px;
+}
+pre > code {
+    display: block;
+    padding: 1rem 1.5rem;
+    white-space: pre;
+}
+
+
+/* SPACING
+======================================================== */
+button, .button { margin-bottom: 1rem; }
+input, textarea, select, fieldset { margin-bottom: 1.5rem; }
+pre, blockquote, dl, figure, table, p, ul, ol, form { margin-bottom: 2.4rem; }
+
+
+/* UTILITIES
+======================================================== */
+
+.u-full-width {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+}
+.u-max-full-width { max-width: 100%; box-sizing: border-box; }
+.u-pull-right { float: right; }
+.u-pull-left { float: left; }
+
+
+/* MISC
+======================================================== */
+
+hr {
+    margin-top: 3rem;
+    margin-bottom: 3.5rem;
+    border-width: 0;
+    border-top: 1px solid #E1E1E1;
+}
+.container:after,
+.row:after,
+.u-cf {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* FONTS
+======================================================== */
+
+/*-- Avant Garde type-face for headings --*/
+@font-face {
+	font-family: 'Avant_Garde';
+	src: url('../fonts/ITC_Avant_Garde_Gothic/ITCAvantGardeStd-Bk.woff2') format('woff2'),
+		 url('../fonts/ITC_Avant_Garde_Gothic/ITCAvantGardeStd-Bk.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+
+/* TYPOGRAPHY
+======================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Avant_Garde';
+    font-weight: normal;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+h1 { font-size: 3.9rem; line-height: 1.2;  letter-spacing: -.1rem;}
+h2 { font-size: 3.3rem; line-height: 1.25; letter-spacing: -.1rem; }
+h3 { font-size: 2.8rem; line-height: 1.3;  letter-spacing: -.1rem; }
+h4 { font-size: 2.0rem; line-height: 1.35; letter-spacing: -.08rem; }
+h5 { font-size: 1.5rem; line-height: 1.5;  letter-spacing: -.05rem; }
+h6 { font-size: 1.1rem; line-height: 1.6;  letter-spacing: 0; }
+
+/* Larger than phablet */
+@media (min-width: 550px) {
+    h1 { font-size: 4.8rem; }
+    h2 { font-size: 4.0rem; }
+    h3 { font-size: 3.3rem; }
+    h4 { font-size: 2.8rem; }
+    h5 { font-size: 2.0rem; }
+    h6 { font-size: 1.2rem; }
+}
+p {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    margin-top: 0;
+}
+i, em { font-style: italic; }
+b, strong { font-weight: bold; font-weight: 700; }
+a { color: #09a6ae; text-decoration: none; }
+a:active, a:focus, a:hover { color: #068c93; text-decoration: underline; }
+
+
+/* GLOBAL
+======================================================== */
+
+html { height: 100%; font-size: 62.5%; overflow-x: hidden; }
+body {
+    display: table;
+    background-color: #000;
+    font-family: 'Avant_Garde';
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: greyscale;
+}
+/* -- Main Wrapper & Sticky Footer Properties --*/
+#wrap {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+header, footer, main { display: table-row; }
+header, footer { height: 1px; }
+main { position: relative; height: 100%; }
+
+.left { float: left; }
+.right { float: right; }
+.center { display: block; margin: 0 auto; clear: both; text-align: center; }
+.clear { clear: both; }
+.hide, .displaynone, .none { display: none; }
+.disabled { pointer-events: none; opacity: 0.4; }
+
+/*-- Addition of global Box-Sizing rule to all elements, including ones not covered by framework --*/
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/* MAIN TITLE FRAMING
+======================================================== */
+
+.movie_title_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.movie_title_frame {
+    position: absolute;
+    background-color: #0c0c0c;
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-height: 692px;
+    margin: 0 auto;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+.movie_title_frame:after {
+    display: inline-block;
+    content: '';
+    padding-top: 53.93%;
+}
+.movie_title {
+    background-size: cover;
+    position: absolute;
+    background-color: #000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-width: 280px;
+    min-height: 151.38px;
+    max-width: 1280px;
+    max-height: 692px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+/* TEXT & TITLES
+======================================================== */
+
+.intro_titles { position: absolute; width: 100%; height: 100%; }
+
+/* Settings for first title, 'Steven Spielberg Presents' */
+.steven_spielberg {
+	position: absolute;
+	top: 44.5%;
+	left: 28%;
+	opacity: 0;
+	-webkit-animation: intro_titles 5s 1 forwards linear;
+			animation: intro_titles 5s 1 forwards linear;
+	-webkit-animation-delay: 1s;
+			animation-delay: 1s;
+	-webkit-transform: rotate(-0.5deg);
+		-ms-transform: rotate(-0.5deg);
+			transform: rotate(-0.5deg);
+}
+.steven_spielberg h2 {
+	font-size: 5.2vw;
+	text-transform: uppercase;
+	letter-spacing: -0.01em;
+}
+.steven_spielberg h2 span {	
+	position: absolute;
+	top: 0%;
+	left: 110%;
+	letter-spacing: -0.015em;
+}
+.presents {
+	position: absolute;
+	top: 56.3%;
+	left: 43.5%;
+	opacity: 0;
+	-webkit-animation: intro_titles 5s 1 forwards linear;
+			animation: intro_titles 5s 1 forwards linear;
+	-webkit-animation-delay: 1s;
+			animation-delay: 1s;
+}
+.presents p { font-size: 3.2vw; line-height: 1.25; letter-spacing: 0.015em; }
+.presents p:first-letter { text-transform: uppercase; }
+
+/* Settings for second title, 'A Robert Zemeckis Film' */
+.a {
+	position: absolute;
+	top: 36%;
+	left: 48.9%;
+	opacity: 0;
+	-webkit-animation: intro_titles 4s 1 forwards linear;
+			animation: intro_titles 4s 1 forwards linear;
+	-webkit-animation-delay: 7s;
+			animation-delay: 7s;
+}
+.a p { font-size: 3.2vw; line-height: 1.25; letter-spacing: 0.02em; }
+.a p:first-letter { text-transform: uppercase; }
+.robert_zemeckis {
+	position: absolute;
+	top: 44.6%;
+	left: 28.1%;
+	opacity: 0;
+	-webkit-animation: intro_titles 4s 1 forwards linear;
+			animation: intro_titles 4s 1 forwards linear;
+	-webkit-animation-delay: 7s;
+			animation-delay: 7s;
+	-webkit-transform: rotate(-0.5deg);
+		-ms-transform: rotate(-0.5deg);
+			transform: rotate(-0.5deg);
+}
+.robert_zemeckis h2 {
+	font-size: 5.2vw;
+	text-transform: uppercase;
+	letter-spacing: -0.03em;
+}
+.robert_zemeckis h2 span {
+	position: absolute;
+	top: -1%;
+	left: 111%;
+	letter-spacing: -0.008em;
+}
+.film {
+	position: absolute;
+	top: 56.5%;
+	left: 46.9%;
+	opacity: 0;
+	-webkit-animation: intro_titles 4s 1 7s forwards linear;
+			animation: intro_titles 4s 1 7s forwards linear;
+	-webkit-animation-delay: 7s;
+			animation-delay: 7s;
+}
+.film p { font-size: 3.2vw; line-height: 1.25; letter-spacing: 0.04em; }
+.film p:first-letter { text-transform: uppercase; }
+
+@media (min-width: 1280px) {
+	.steven_spielberg h2, .robert_zemeckis h2 { font-size: 66.2px; }
+	.presents p, .a p, .film p { font-size: 42px; }
+}
+
+/* Keyframes for Intro Text Titles transitions */
+@-webkit-keyframes intro_titles {
+    0% { opacity: 0; }
+	16%,84% { opacity: 1; }
+    100% { opacity: 0; }
+}
+@keyframes intro_titles {
+    0% { opacity: 0; }
+	16%,84% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+
+/* MAIN 'BACK TO THE FUTURE' TITLE GRAPHICS
+======================================================== */
+
+.main_title {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-animation: main_title_end 0.9s 1 17s forwards linear;
+			animation: main_title_end 0.9s 1 17s forwards linear;
+}
+.main_title img { position: absolute; }
+
+/* Keyframes for final fade-out once title is finished */
+@-webkit-keyframes main_title_end {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+@keyframes main_title_end {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Settings for 'Back' */
+.back img {
+	top: 22.8%;
+	left: 19.1%;
+	width: 61.4%;
+	opacity: 0;
+	-webkit-animation: main_title_1 2.3s 1 11.6s forwards cubic-bezier(0.25, 0.46, 0.45, 0.94);
+			animation: main_title_1 2.3s 1 11.6s forwards cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+/* Settings for 'To The Future' */
+.to_the_future img {
+	top: 50.95%;
+    left: 20.6%;
+    width: 59.2%;
+	opacity: 0;
+	-webkit-animation: main_title_2 1s 1 13.5s forwards ease-in;
+			animation: main_title_2 1s 1 13.5s forwards ease-in;
+}
+
+/* Keyframes for 'Back' transition */
+@-webkit-keyframes main_title_1 {
+    0% { opacity: 0.1; transform: translate(200%, 0); }
+	39% { opacity: 0.4; }
+	75% { opacity: 0.75; }
+    100% { opacity: 1; transform: translate(0%, 0); }
+}
+@keyframes main_title_1 {
+    0% { opacity: 0.1; transform: translate(200%, 0); }
+	39% { opacity: 0.4; }
+	75% { opacity: 0.75; }
+    100% { opacity: 1; transform: translate(0%, 0); }
+}
+
+/* Keyframes for 'To The Future' transition */
+@-webkit-keyframes main_title_2 {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes main_title_2 {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+/* SVG OUTLINES/CLIPPATHS FOR THE MAIN TITLE,
+SO SHINE EFFECT STAYS INSIDE SHAPE OF GRAPHICS
+======================================================== */
+
+/* Keep the SVG defs for the 'cookie-cutter' outlines hidden */
+svg { position: absolute; width: 0; height: 0; }
+
+/* Outline shape for 'Back' */
+.back_outline {
+	-webkit-clip-path: url(#back_outline);
+			clip-path: url(#back_outline);
+	position: absolute;
+	top: 22.8%;
+	left: 19.1%;
+	width: 61.4%;
+	height: 28%;
+	overflow: hidden;
+	-webkit-animation: back_outline 2.3s 1 11.6s forwards cubic-bezier(0.25, 0.46, 0.45, 0.94);
+			animation: back_outline 2.3s 1 11.6s forwards cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+/* Animated shine effect inside 'Back' outline */
+.back_shine {
+	position: absolute;
+	background: -webkit-linear-gradient(
+        top,
+		rgba(0, 0, 0, 0) 24%,
+		rgba(140, 246, 251, 0.6) 40%,
+		rgba(183, 241, 251, 0.8) 50%,
+		rgba(140, 246, 251, 0.6) 60%,
+		rgba(0, 0, 0, 0) 80%
+    );
+	background: linear-gradient(
+        to bottom,
+		rgba(0, 0, 0, 0) 24%,
+		rgba(140, 246, 251, 0.6) 40%,
+		rgba(183, 241, 251, 0.8) 50%,
+		rgba(140, 246, 251, 0.6) 60%,
+		rgba(0, 0, 0, 0) 80%
+    );
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	-webkit-animation: back_shine 4.5s 1 11s forwards ease-in;
+			animation: back_shine 4.5s 1 11s forwards ease-in;
+}
+
+/* Keyframes for 'Back' outline, so it matches 'Back' graphic's transition */
+@-webkit-keyframes back_outline {
+    0% { opacity: 0.1; transform: scale(1) translate(200%, 0); }
+    100% { opacity: 1; transform: scale(1) translate(0%, 0); }
+}
+@keyframes back_outline {
+    0% { opacity: 0.1; transform: scale(1) translate(200%, 0); }
+    100% { opacity: 1; transform: scale(1) translate(0%, 0); }
+}
+
+/* Keyframes for shine effect inside 'Back' outline */
+@-webkit-keyframes back_shine {
+    0% { opacity: 0; transform: rotate(3deg) translate(0, -200%); }
+    100% { opacity: 0.5; transform: rotate(3deg) translate(0, 200%); }
+}
+@keyframes back_shine {
+    0% { opacity: 0; transform: rotate(3deg) translate(0, -200%); }
+    100% { opacity: 0.5; transform: rotate(3deg) translate(0, 200%); }
+}
+
+/* Outline shape for 'To The Future' */
+.to_the_future_outline {
+	-webkit-clip-path: url(#to_the_future_outline);
+			clip-path: url(#to_the_future_outline);
+	position: absolute;
+	top: 51.2%;
+    left: 20.6%;
+    width: 59.2%;
+	height: 28%;
+	overflow: hidden;
+	-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+			transform: scale(1);
+}
+/* Animated shine effect inside 'To The Future' outline */
+.to_the_future_shine {
+	position: absolute;
+	background: -webkit-linear-gradient(
+        top,
+		rgba(0, 0, 0, 0) 24%,
+		rgba(140, 246, 251, 0.6) 40%,
+		rgba(183, 241, 251, 0.8) 50%,
+		rgba(140, 246, 251, 0.6) 60%,
+		rgba(0, 0, 0, 0) 80%
+    );
+	background: linear-gradient(
+        to bottom,
+		rgba(0, 0, 0, 0) 24%,
+		rgba(140, 246, 251, 0.6) 40%,
+		rgba(183, 241, 251, 0.8) 50%,
+		rgba(140, 246, 251, 0.6) 60%,
+		rgba(0, 0, 0, 0) 80%
+    );
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	-webkit-animation: to_the_future_shine 4.5s 1 12.5s forwards ease-in;
+			animation: to_the_future_shine 4.5s 1 12.5s forwards ease-in;
+}
+
+/* Keyframes for shine effect inside 'To The Future' outline */
+@-webkit-keyframes to_the_future_shine {
+    0% { opacity: 0; transform: rotate(-1deg) translate(0, -200%); }
+    100% { opacity: 0.5; transform: rotate(-1deg) translate(0, 200%); }
+}
+@keyframes to_the_future_shine {
+    0% { opacity: 0; transform: rotate(-1deg) translate(0, -200%); }
+    100% { opacity: 0.5; transform: rotate(-1deg) translate(0, 200%); }
+}
+
+/* Animated shine sitting outside text/graphics, on far-right of 'Back' */
+.top_shine {
+	position: absolute;
+	background: -webkit-radial-gradient(
+        center center,
+		rgba(244, 236, 217, 0.82),
+		rgba(237, 201, 101, 0.7),
+		rgba(245, 214, 128, 0.48),
+        rgba(255, 224, 0, 0)
+    );
+	background: radial-gradient(
+        at center center,
+		rgba(255, 255, 255, 0.66),
+		rgba(79, 140, 255, 0.3) 42%,
+		rgba(49, 113, 255, 0.05) 66%,
+		rgba(0, 0, 0, 0) 75% );
+    );
+	width: 33%;
+	height: 16%;
+	top: 33%;
+	left: 57%;
+	opacity: 0;
+	-webkit-animation: top_shine 1s 1 13.5s forwards linear;
+			animation: top_shine 1s 1 13.5s forwards linear;
+}
+
+/* Keyframes for shine effect outside text/graphics */
+@-webkit-keyframes top_shine {
+    0% { opacity: 0; transform: rotate(-42deg) translate(0, -100%); }
+    50% { opacity: 0.5; transform: rotate(-42deg) translate(0, 0%); }
+    100% { opacity: 0; transform: rotate(-42deg) translate(0, -100%); }
+}
+@keyframes top_shine {
+    0% { opacity: 0; transform: rotate(-42deg) translate(0, -100%); }
+    50% { opacity: 0.5; transform: rotate(-42deg) translate(0, 0%); }
+    100% { opacity: 0; transform: rotate(-42deg) translate(0, 100%); }
+}
